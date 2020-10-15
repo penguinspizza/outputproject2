@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+    <meta charset="UTF-8">
+    <title>発掘調査占い</title>
+    </head>
+    <body>
+        <form method="POST">{% csrf_token %}
+            <p>2000年後、あなたの墓を未来の人間が発掘調査するかもしれません......
+            <br>
+            では、その時あなたの推定年齢は何歳と判定されるでしょうか！
+            <br>
+            是非とも占ってみましょう！！
+            </p>
+            <input type="text" id="name" name="name" placeholder="名前を入力してください">
+            <input type="submit" value="占う">
+            <p>あなたの推定年齢は<b>{{ value }}</b>歳です！！！</p>
+        </form>
+    </body>
+</html>
