@@ -12,10 +12,10 @@
             <br>
             是非とも占ってみましょう！！
             </p>
-            <form method="POST">{% csrf_token %}
-                <input type="text" id="name" name="name" placeholder="名前を入力してください">
-                <input type="submit" value="占う">
-            </form>
+            <hr>
+            <h4>！！結果発表！！</h4>
+            <p><b>{{ name }}</b>さんの推定年齢は<b>{{ value }}</b>歳です！！！</p>
+            <a href="{% url 'fortunetelling:fortunetelling' %}">もう一度占う</a>
         </div>
     </body>
 </html>
