@@ -26,7 +26,7 @@ SECRET_KEY = 'q91zk2r=4yo#nwlfme#d3@r4_svjw!1$8#-01!54l3-7koei%f'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    # 'penguinspizza.pythonanywhere.com'
+    'penguinspizza.pythonanywhere.com'
     ]
 
 
