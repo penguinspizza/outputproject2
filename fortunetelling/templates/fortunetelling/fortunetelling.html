@@ -1,21 +1,22 @@
-<!DOCTYPE html>
-<html lang="ja">
-    <head>
-    <meta charset="UTF-8">
-    <title>発掘調査占い</title>
-    </head>
-    <body>
-        <div>
-            <p>2000年後、あなたの墓を未来の人間が発掘調査するかもしれません......
-            <br>
-            では、その時あなたの推定年齢は何歳と判定されるでしょうか！
-            <br>
-            是非とも占ってみましょう！！
-            </p>
-            <form method="POST">{% csrf_token %}
-                <input type="text" id="name" name="name" placeholder="名前を入力してください">
-                <input type="submit" value="占う">
-            </form>
-        </div>
-    </body>
-</html>
+{% extends 'fortunetelling/base.html' %}
+{% block header %}
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">発掘調査占い</h1>
+    <p class="lead">2000年後、あなたの墓を未来の人間が発掘調査するかもしれません......<br>
+    では、その時あなたの推定年齢は何歳と判定されるでしょうか！<br>
+    是非とも占ってみましょう！！
+  </div>
+</div>
+{% endblock header %}
+{% block content %}
+{% load static %}
+<img src="{% static 'fortunetelling/images/job_hakkutsu.png' %}" width="15%" height="15%">
+<form method="POST">{% csrf_token %}
+  <div class="form-group">
+    <label for="exampleInputPassword1">名前を入力してください</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="例）浦島太郎">
+  </div>
+  <button type="submit" class="btn btn-primary">今すぐ占う</button>
+</form>
+{% endblock content %}
