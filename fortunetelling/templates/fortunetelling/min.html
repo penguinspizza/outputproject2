@@ -4,11 +4,14 @@
 <div class="card">
   <h5 class="card-header">！！結果発表！！</h5>
   <div class="card-body">
+    <h2 class="card-title">！！おめでとうございます！！</h2>
     <img src="{% static 'fortunetelling/images/kofun_zenpou_kouenfun.png' %}" width="15%" height="15%">
     <img src="{% static 'fortunetelling/images/job_tanken_koukogaku2.png' %}" width="15%" height="15%">
-    <h5 class="card-title"><b>{{ name }}</b>さんの推定年齢は<b>{{ value }}</b>歳です！！！</h5>
+    <h5 class="card-title"><b>{{ name }}</b>さんの推定年齢は<b>{{ value }}</b>歳なのでナスカの地上絵が授けられました！！！</h5>
+    <img src="{% static 'fortunetelling/images/nasca_neko.png' %}" width="15%" height="15%">
+    <br>
     <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="2000年後、{{ name }}さんの墓を未来の人間が発掘調査するかもしれません......
-その時、{{ name }}さんの推定年齢は{{ value }}歳です！！！" data-url="http://penguinspizza.pythonanywhere.com/fortunetelling/" data-lang="ja" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+その時、{{ name }}さんの推定年齢は{{ value }}歳なのでナスカの地上絵が授けられました！！！" data-url="http://penguinspizza.pythonanywhere.com/fortunetelling/" data-lang="ja" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <a href="{% url 'fortunetelling:fortunetelling' %}" class="btn btn-secondary btn-sm">もう一度占う</a>
   </div>
 </div>

@@ -16,4 +16,9 @@ class FortuneTelling(View):
             'name': name,
             'value': random_value,
         }
-        return render(request, 'fortunetelling/result.html', context)
+        if random_value == 0:
+            return render(request, 'fortunetelling/min.html', context)
+        elif random_value == 120:
+            return render(request, 'fortunetelling/max.html', context)
+        else:
+            return render(request, 'fortunetelling/result.html', context)
